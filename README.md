@@ -1,55 +1,86 @@
-# Campus Connect — Mini Project (Experiments 1–4)
+# 🚀 Campus Connect — Digital Portfolio
 
-A single small Flutter app that covers Experiments 1 to 4 of the
-"User Interface Design using Flutter" lab.
+**Campus Connect** is a modern, responsive Flutter Web portfolio application designed to showcase academic qualifications, technical proficiencies, personal background, and contact details in an intuitive, multi-screen interface.
 
-## How the experiments map to the code
+---
 
-| Experiment | What it asks | Where it is |
-|---|---|---|
-| 1(a) | Install Flutter & Dart SDK | Not code — see setup steps below |
-| 1(b) | Simple Dart program, language basics | `lib/dart_basics.dart` |
-| 2(a)/(b) | Explore Text/Image/Container; Row/Column/Stack layouts | `lib/screens/widgets_screen.dart` |
-| 3(a)/(b) | Responsive UI with breakpoints | `lib/screens/responsive_screen.dart` |
-| 4(a)/(b) | Navigator + named routes | `lib/main.dart`, `lib/screens/home_screen.dart`, `lib/screens/profile_screen.dart` |
+## 📱 Project Overview
 
-## 1. Install Flutter & Dart SDK
-1. Download the Flutter SDK from flutter.dev and unzip it.
-2. Add `flutter/bin` to your PATH.
-3. Run `flutter doctor` and fix anything it flags (Android Studio, emulator, etc.).
-4. Confirm with `flutter --version`.
+Campus Connect consolidates essential student profile details into a single structured web app. Instead of relying on static resumes or disjointed documents, it presents personal achievements, core coursework, and development skills across dedicated, interactive views.
 
-## 2. Run the Dart-basics script (Experiment 1b)
-```
-dart run lib/dart_basics.dart
-```
-This prints variables, a function with a default parameter, a for-loop with
-if/else grading logic, a Map iteration, and a simple class — all core Dart
-syntax in one file.
+---
 
-## 3. Run the Flutter app (Experiments 2–4)
-```
-flutter pub get
-flutter run
-```
-This launches **Home Screen**, from which you can navigate to:
-- **Widgets & Layouts Demo** — Text, Image, Container, Row, Column, Stack
-- **Responsive UI Demo** — resize the window (or run on web with
-  `flutter run -d chrome`) to watch the grid go from 1 → 2 → 3 columns
-- **Profile** — reached via `Navigator.pushNamed` with arguments, showing
-  navigation between screens using named routes
+## 🎯 Main Objectives
 
-## Project structure
-```
+* Build a responsive Flutter Web application with cross-platform layout support
+* Implement multi-screen navigation using named routes (`/`, `/about`, `/qualifications`, `/skills`, `/contact`)
+* Design modular, reusable card components for skills, contact channels, and education timelines
+* Incorporate profile imagery using circular avatar framing
+* Maintain structured version control using Git and GitHub
+
+---
+
+## ✨ Features
+
+### 🏠 Home Screen
+* Centered profile header with avatar framing
+* Dedicated navigation menu with direct routes to all application sections:
+  * About Me
+  * Qualifications
+  * Skills
+  * Contact
+
+### 👤 About Screen
+* Expanded profile overview featuring student year and career aspirations
+* Educational focus centered on Artificial Intelligence, Data Science, and mobile app development
+* Direct "Back to Home" navigation action
+
+### 🎓 Qualifications Screen
+* Structured timeline cards detailing academic milestones:
+  * **Bachelor of Technology**: Artificial Intelligence & Data Science, MLEW (2024 – 2028) — ★ CGPA: 7.99
+  * **Intermediate**: MPC, NRI Junior College (2022 – 2024) — ★ Percentage: 81.9%
+  * **SSC**: Secondary Education (Completed)
+
+### 💡 Skills Screen
+* Organized competency cards categorized by technical domain:
+  * **Flutter**: Mobile App Development
+  * **Dart**: Programming Language
+  * **Database**: MySQL / Firebase
+  * **Web Development**: HTML, CSS, JavaScript
+  * **Communication**: Teamwork and Presentation
+
+### 📞 Contact Screen
+* Interactive contact directory with return navigation:
+  * **Email**: [urjithatalluru@gmail.com](mailto:urjithatalluru@gmail.com)
+  * **Phone Number**: +91 9876543210
+  * **LinkedIn**: [linkedin.com/in/urjitha-talluru](https://www.linkedin.com/in/urjitha-talluru/)
+  * **GitHub**: [github.com/urjithatalluru-2006](https://github.com/urjithatalluru-2006)
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+| :--- | :--- |
+| **Flutter** | Cross-platform UI development framework |
+| **Dart** | Application logic and object-oriented programming |
+| **Material Design** | Layout scaffolding, typography, and iconography |
+| **Flutter Assets** | Profile image rendering via `AssetImage` / `NetworkImage` |
+| **Git & GitHub** | Source code management and repository hosting |
+
+---
+
+## 📂 Project Structure
+
+```text
 campus_connect/
-├── pubspec.yaml
-├── README.md
-└── lib/
-    ├── dart_basics.dart          # Experiment 1(b)
-    ├── main.dart                 # App entry + named routes (Exp 4)
-    └── screens/
-        ├── home_screen.dart      # Exp 4(a): Navigator basics
-        ├── widgets_screen.dart   # Exp 2: widgets & layouts
-        ├── responsive_screen.dart# Exp 3: responsive UI
-        └── profile_screen.dart   # Exp 4(b): named route + arguments
-```
+│
+├── assets/
+│   └── profile.jpeg          # Local image asset
+│
+├── lib/
+│   └── main.dart             # Application entry point, theme & named routes
+│
+├── web/                      # Web support and index shell
+├── pubspec.yaml              # App configuration, assets & dependencies
+└── README.md                 # Project documentation
